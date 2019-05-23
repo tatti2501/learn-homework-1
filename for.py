@@ -20,16 +20,16 @@
 # if __name__ == "__main__":
 #     main()
 
-line=('привет мир!')
-for number in line:
-    print(number)
+# line=('привет мир!')
+# for number in line:
+#     print(number)
+def main():
+    journal=[{'school_class': '4a', 'scores': [3,4,4,5,2]}, {'school_class': '5b', 'scores': [5,3,4,5,2]},{'school_class': '6c', 'scores': [2,5,5,4,3]}]
+    
+    for grade_for_class in journal:
+            for key in journal:
+        journal([0]['scores'])=sum(journal[0]['scores'])/len(journal[0]['scores'])
+            print(grade_for_class)
 
-journal=[{'school_class': '4a', 'scores': [3,4,4,5,2]}, {'school_class': '5b', 'scores': [5,3,4,5,2]},{'school_class': '6c', 'scores': [2,5,5,4,3]}]
-
-journal[0]['scores']=sum(journal[0]['scores'])/len(journal[0]['scores'])
-
-for grade_for_class in journal:
-        print(grade_for_class)
-
-def sum(scores, start):
-    return start
+if __name__ == "__main__":
+    main()
