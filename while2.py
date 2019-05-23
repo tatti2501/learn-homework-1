@@ -16,10 +16,21 @@
 """
 
 def ask_user():
-    """
-    Замените pass на ваш код
-    """
-    pass
+    glossary={"Как дела?": "Хорошо!", "Что делаешь?": "Программирую", "А что нужно делать?":"Исправлять ошибки в слайдах"}
     
+    user_say=input('Спроси что-нибудь ')
+    while True:
+        if user_say==glossary:
+            input(glossary)
+            
+
+
 if __name__ == "__main__":
     ask_user()
+while True:
+        user_say= input('Как дела? ')
+        if user_say=='Хорошо':
+            print('И у меня отлично! ')
+            break
+        else:
+            print('А еще? ')
