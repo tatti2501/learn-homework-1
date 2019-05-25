@@ -14,23 +14,27 @@
     Программа: Программирую
     
 """
-
-def ask_user():
-    glossary={"Как дела?": "Хорошо!", "Что делаешь?": "Программирую", "А что нужно делать?":"Исправлять ошибки в слайдах"}
+glossary={"Как дела?": "Хорошо!", "Что делаешь?": "Программирую", "А что нужно делать?":"Исправлять ошибки в слайдах"}
+def ask_user(wert):
     
-    user_say=input('Спроси что-нибудь ')
     while True:
-        if user_say==glossary:
-            input(glossary)
+        user_say=input('Спроси что-нибудь ')
+        if user_say in wert:
+            print(wert[user_say])
+        elif user_say=="Пока":
+            print("Пока, пока!")
+            break
+        else:
+            print('Сам ты {}'.format(user_say))
             
 
 
 if __name__ == "__main__":
-    ask_user()
-while True:
-        user_say= input('Как дела? ')
-        if user_say=='Хорошо':
-            print('И у меня отлично! ')
-            break
-        else:
-            print('А еще? ')
+    ask_user(glossary)
+# while True:
+#         user_say= input('Как дела? ')
+#         if user_say=='Хорошо':
+#             print('И у меня отлично! ')
+#             break
+#         else:
+#             print('А еще? ')

@@ -25,16 +25,18 @@
 #     print(number)
 def main():
     journal=[{'school_class': '4a', 'scores': [3,4,4,5,2]}, {'school_class': '5b', 'scores': [5,3,4,5,2]},{'school_class': '6c', 'scores': [2,5,5,4,3]}]
-              
-    for grade_for_class in journal:
-        print(grade_for_class['scores'])
-        print(sum(grade_for_class['scores'])/len(grade_for_class['scores']))
     
-    for school in journal:
-        print(sum(school['scores'])/len(school['scores']))
-        
+    summ = 0
+    cont = 0
+    for grade_for_class in journal:
+        print(sum(grade_for_class['scores'])/len(grade_for_class['scores']))
+        summ = summ + sum(grade_for_class['scores'])
+        cont = cont + len(grade_for_class['scores'])
+    
+    print(summ/cont)
 
-    print(sum(journal[0]['scores'])/len(journal[0]['scores']))
+    
+# print(sum(journal[0]['scores'])/len(journal[0]['scores'])
 
 if __name__ == "__main__":
     main()

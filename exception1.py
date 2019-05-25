@@ -9,12 +9,20 @@
   и завершала работу при помощи оператора break
     
 """
+glossary={"Как дела?": "Хорошо!", "Что делаешь?": "Программирую", "А что нужно делать?":"Исправлять ошибки в слайдах"}
 
-def ask_user():
-    """
-    Замените pass на ваш код
-    """
-    pass
-    
+def ask_user(wert):
+    while True:
+        try:
+            user_say = input('Спроси что-нибудь ')
+        except KeyboardInterrupt:
+            print('Пока!')
+            break
+        if user_say in wert:
+            print(wert[user_say])
+        elif user_say == "Пока":
+            print("Пока, пока!")
+            break
+            
 if __name__ == "__main__":
-    ask_user()
+    ask_user(glossary)
